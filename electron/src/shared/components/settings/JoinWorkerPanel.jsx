@@ -74,7 +74,7 @@ export default function JoinWorkerPanel({ request }) {
       title={t('settings.worker_join_title', { defaultValue: "Lend this machine's GPU" })}
       description={t('settings.worker_join_desc', {
         defaultValue:
-          'Let another copy of VoiceStudio send jobs to this machine. Paste the join code it showed you — or scan its QR with your phone and paste it here.',
+          'Let another copy of AUREO VOICE STUDIO send jobs to this machine. Paste the join code it showed you — or scan its QR with your phone and paste it here.',
       })}
       actions={
         joined ? (

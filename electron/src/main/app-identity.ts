@@ -1,10 +1,13 @@
 import type { AboutPanelOptionsOptions, App, MenuItemConstructorOptions } from 'electron';
 
-export const DESKTOP_APP_NAME = 'VoiceStudio';
+export const DESKTOP_APP_NAME = 'AUREO VOICE STUDIO';
+
+// Keep Electron's internal name: it controls existing userData and cache paths.
+const DESKTOP_STORAGE_NAME = 'VoiceStudio';
 
 /** Set before Electron creates the native application menu. */
 export function installAppIdentity(application: Pick<App, 'setName'>): void {
-  application.setName(DESKTOP_APP_NAME);
+  application.setName(DESKTOP_STORAGE_NAME);
 }
 
 export function createMacApplicationMenuTemplate(): MenuItemConstructorOptions[] {
@@ -49,5 +52,14 @@ export function installMacApplicationMenu<TMenu>(
     applicationVersion: version,
     version,
   });
-  menu.setApplicationMenu(menu.buildFromTemplate(createMacApplicationMenuTemplate()));
+  const applicationMenu = menu.buildFromTemplate(createMacApplicationMenuTemplate());
+  // Electron localizes role labels itself. Replace only the old brand in the
+  // native About/Hide/Quit labels, keeping their OS language and behaviour.
+  const nativeMenu = applicationMenu as {
+    items?: { submenu?: { items: { label: string }[] } }[];
+  };
+  for (const item of nativeMenu.items?.[0]?.submenu?.items ?? []) {
+    item.label = item.label.replaceAll(DESKTOP_STORAGE_NAME, DESKTOP_APP_NAME);
+  }
+  menu.setApplicationMenu(applicationMenu);
 }

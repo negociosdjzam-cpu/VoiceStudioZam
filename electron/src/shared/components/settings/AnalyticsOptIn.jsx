@@ -85,7 +85,7 @@ export default function AnalyticsOptIn() {
   return (
     <>
       <SettingRow
-        title={t('privacy.analytics_title', { defaultValue: 'Help improve VoiceStudio' })}
+        title={t('privacy.analytics_title', { defaultValue: 'Help improve AUREO VOICE STUDIO' })}
         subtitle={t('privacy.analytics_subtitle', {
           defaultValue: 'Off by default. Anonymous usage stats — never your content.',
         })}
@@ -94,7 +94,7 @@ export default function AnalyticsOptIn() {
             checked={!!state.opted_in}
             disabled={busy}
             onChange={toggle}
-            aria-label={t('privacy.analytics_title', { defaultValue: 'Help improve VoiceStudio' })}
+            aria-label={t('privacy.analytics_title', { defaultValue: 'Help improve AUREO VOICE STUDIO' })}
             data-testid="analytics-optin"
           />
         }

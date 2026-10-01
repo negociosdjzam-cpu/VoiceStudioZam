@@ -22,7 +22,7 @@ import {
   observeMainProcessTask,
 } from './main-error-journal';
 import { activateLiveWindow, isLiveWindow } from './window-safety';
-import { installAppIdentity, installMacApplicationMenu } from './app-identity';
+import { DESKTOP_APP_NAME, installAppIdentity, installMacApplicationMenu } from './app-identity';
 
 // Packaged GUI launches can inherit a short-lived terminal pipe. When that
 // launcher exits, diagnostic console writes emit EPIPE asynchronously and can
@@ -130,6 +130,7 @@ function createWindow(): BrowserWindow {
       ? process.env.ELECTRON_RENDERER_URL
       : `${APP_ORIGIN}/index.html`;
   const win = new BrowserWindow({
+    title: DESKTOP_APP_NAME,
     icon: brandIconPath(process.platform === 'win32' ? 'icon.ico' : 'icon.png'),
     width: 1280,
     height: 820,
@@ -307,7 +308,7 @@ if (process.env.VOICESTUDIO_ALLOW_MULTIPLE_INSTANCES !== '1' && !app.requestSing
       const icon = nativeImage.createFromPath(brandIconPath('icon.png'));
       if (process.platform === 'darwin') app.dock?.setIcon(icon);
       tray = new Tray(createTrayIcon(brandIconPath('32x32.png')));
-      tray.setToolTip('VoiceStudio');
+      tray.setToolTip(DESKTOP_APP_NAME);
       closeCapture = installNativeCapture(PRELOAD_PATH, tray, () => mainWindow);
       tray.on('click', () => {
         if (!isLiveWindow(mainWindow)) mainWindow = createWindow();

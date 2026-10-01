@@ -29,11 +29,11 @@ def test_current_version_is_in_lockstep_everywhere() -> None:
         assert match and match.group(1) == CURRENT_VERSION, path
 
 
-def test_visible_brand_surfaces_say_voicestudio() -> None:
+def test_visible_brand_surfaces_say_aureo_voice_studio() -> None:
     visible_files = ("electron/build/Info.plist", "electron/src/renderer/index.html")
     for path in visible_files:
         text = (ROOT / path).read_text()
-        assert "VoiceStudio" in text, path
+        assert "AUREO VOICE STUDIO" in text, path
         assert "OmniVoice needs" not in text, path
         assert "OmniVoice may" not in text, path
         assert "OmniVoice Gallery" not in text, path

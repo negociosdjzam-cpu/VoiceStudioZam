@@ -51,12 +51,12 @@ agent = Agent(
 
 pipeline = VoicePipeline(
     workflow=SingleAgentVoiceWorkflow(agent),
-    stt_model="gpt-4o-transcribe",  # served by VoiceStudio's active speech-recognition engine
-    tts_model="gpt-4o-mini-tts",  # served by VoiceStudio's active voice engine
+    stt_model="gpt-4o-transcribe",  # served by AUREO VOICE STUDIO's active speech-recognition engine
+    tts_model="gpt-4o-mini-tts",  # served by AUREO VOICE STUDIO's active voice engine
     config=VoicePipelineConfig(
         model_provider=OpenAIVoiceModelProvider(openai_client=voicestudio),
         stt_settings=STTModelSettings(language="en"),  # omit language to auto-detect
-        tts_settings=TTSModelSettings(voice="alloy"),  # or a VoiceStudio voice-profile id
+        tts_settings=TTSModelSettings(voice="alloy"),  # or a AUREO VOICE STUDIO voice-profile id
     ),
 )
 `;

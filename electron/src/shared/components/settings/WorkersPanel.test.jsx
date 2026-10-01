@@ -87,7 +87,7 @@ describe('WorkersPanel', () => {
     );
     renderPanel();
 
-    expect(await screen.findByRole('alert')).toHaveTextContent(/another VoiceStudio instance/i);
+    expect(await screen.findByRole('alert')).toHaveTextContent(/another AUREO VOICE STUDIO instance/i);
     expect(screen.queryByText(/Generate token/i)).not.toBeInTheDocument();
   });
 

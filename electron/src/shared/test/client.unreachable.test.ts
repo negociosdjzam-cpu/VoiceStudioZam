@@ -60,7 +60,7 @@ describe('backendContact', () => {
 
   it('gives dev-mode advice pointing at the bun run dev terminal and omnivoice.log', () => {
     const msg = unreachableBackendMessage('dev');
-    expect(msg).toContain("Can't reach the local VoiceStudio backend");
+    expect(msg).toContain("Can't reach the local AUREO VOICE STUDIO backend");
     expect(msg).toContain('bun run dev');
     expect(msg).toContain('omnivoice.log');
     expect(msg).not.toContain('restart the app');

@@ -63,7 +63,7 @@ describe('apiFetch — lifecycle-aware restart wait', () => {
     const p = apiFetch('/model/status');
     const assertion = expect(p).rejects.toMatchObject({
       status: 0,
-      message: expect.stringContaining("Can't reach the local VoiceStudio backend"),
+      message: expect.stringContaining("Can't reach the local AUREO VOICE STUDIO backend"),
     });
     await vi.advanceTimersByTimeAsync(CASCADE_MS + 100);
     await assertion;
@@ -186,7 +186,7 @@ describe('apiFetch — an alive-but-unresponsive backend says so (#1113)', () =>
 
     const p = apiFetch('/model/status');
     const assertion = expect(p).rejects.toMatchObject({
-      message: expect.stringContaining("Can't reach the local VoiceStudio backend"),
+      message: expect.stringContaining("Can't reach the local AUREO VOICE STUDIO backend"),
     });
     await vi.advanceTimersByTimeAsync(CASCADE_MS + 100);
     await assertion;

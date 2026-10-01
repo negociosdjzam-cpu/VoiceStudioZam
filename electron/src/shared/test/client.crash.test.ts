@@ -70,7 +70,7 @@ describe('apiFetch — crash-marker honesty (#941)', () => {
     const p = apiFetch('/generate');
     const assertion = expect(p).rejects.toMatchObject({
       status: 0,
-      message: expect.stringContaining("Can't reach the local VoiceStudio backend"),
+      message: expect.stringContaining("Can't reach the local AUREO VOICE STUDIO backend"),
     });
     await vi.advanceTimersByTimeAsync(400 + 900 + 1600 + 100);
     await assertion;
