@@ -72,7 +72,7 @@ export default function GoalBar({ mini = false, progress: injected = null, class
       {!mini && (
         <div className="goal__head flex items-baseline justify-between gap-[var(--space-4,8px)]">
           <span className="goal__title font-serif text-[1rem] font-medium tracking-[-0.01em] text-[var(--chrome-fg)]">
-            {t('donate.goal.title', { defaultValue: 'Support VoiceStudio development' })}
+            {t('donate.goal.title', { defaultValue: 'Support AUREO VOICE STUDIO development' })}
           </span>
           <span className="goal__pct font-mono text-[0.78rem] font-semibold text-[var(--goal-accent)] [font-variant-numeric:tabular-nums]">
             {pctLabel}%

@@ -17,10 +17,10 @@ describe('installAppIdentity', () => {
     expect(setName).toHaveBeenCalledWith('VoiceStudio');
   });
 
-  it('defines the complete native macOS menu with VoiceStudio app labels', () => {
+  it('defines the complete native macOS menu with AUREO VOICE STUDIO app labels', () => {
     const template = createMacApplicationMenuTemplate();
 
-    expect(template[0]).toMatchObject({ label: 'VoiceStudio' });
+    expect(template[0]).toMatchObject({ label: 'AUREO VOICE STUDIO' });
     expect(template[0]?.submenu).toEqual(
       expect.arrayContaining([{ role: 'about' }, { role: 'hide' }, { role: 'quit' }]),
     );
@@ -45,7 +45,20 @@ describe('installAppIdentity', () => {
     const application = {
       setAboutPanelOptions: vi.fn(),
     };
-    const nativeMenu = { id: 'native-menu' };
+    const nativeMenu = {
+      id: 'native-menu',
+      items: [
+        {
+          submenu: {
+            items: [
+              { label: 'Acerca de VoiceStudio' },
+              { label: 'Ocultar VoiceStudio' },
+              { label: 'Salir de VoiceStudio' },
+            ],
+          },
+        },
+      ],
+    };
     const menu = {
       buildFromTemplate: vi.fn(() => nativeMenu),
       setApplicationMenu: vi.fn(),
@@ -54,10 +67,15 @@ describe('installAppIdentity', () => {
     installMacApplicationMenu(application, menu, '0.5.6');
 
     expect(application.setAboutPanelOptions).toHaveBeenCalledWith({
-      applicationName: 'VoiceStudio',
+      applicationName: 'AUREO VOICE STUDIO',
       applicationVersion: '0.5.6',
       version: '0.5.6',
     });
     expect(menu.setApplicationMenu).toHaveBeenCalledWith(nativeMenu);
+    expect(nativeMenu.items[0].submenu.items.map((item) => item.label)).toEqual([
+      'Acerca de AUREO VOICE STUDIO',
+      'Ocultar AUREO VOICE STUDIO',
+      'Salir de AUREO VOICE STUDIO',
+    ]);
   });
 });

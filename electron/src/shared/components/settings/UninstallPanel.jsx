@@ -140,13 +140,13 @@ export default function UninstallPanel() {
         icon={Trash2}
         title={t('settings.uninstall', { defaultValue: 'Remove all data' })}
         description={t('settings.uninstall_desc', {
-          defaultValue: 'Delete everything VoiceStudio has written to this machine, then quit.',
+          defaultValue: 'Delete everything AUREO VOICE STUDIO has written to this machine, then quit.',
         })}
       >
         <p className="m-0 mb-[var(--space-4)] [font-family:var(--font-sans)] text-[length:var(--text-md)] leading-[1.6] text-[var(--chrome-fg-muted)]">
           {t('settings.uninstall_body', {
             defaultValue:
-              'VoiceStudio is fully local, so uninstalling is just deleting the folders it wrote. This removes your voice profiles, projects, and generated audio permanently — there is no undo. Removing the app itself is a separate step.',
+              'AUREO VOICE STUDIO is fully local, so uninstalling is just deleting the folders it wrote. This removes your voice profiles, projects, and generated audio permanently — there is no undo. Removing the app itself is a separate step.',
           })}
         </p>
         {owned.length > 0 && (
@@ -180,7 +180,7 @@ export default function UninstallPanel() {
                   label={LABELS.models}
                   hint={t('settings.uninstall_models_caveat', {
                     defaultValue:
-                      'The standard Hugging Face cache, shared with other AI tools on this machine — removing it may delete models VoiceStudio never downloaded. Anything VoiceStudio needs downloads again.',
+                      'The standard Hugging Face cache, shared with other AI tools on this machine — removing it may delete models AUREO VOICE STUDIO never downloaded. Anything AUREO VOICE STUDIO needs downloads again.',
                   })}
                   path={models.path}
                   size={models.size_bytes}
@@ -220,7 +220,7 @@ export default function UninstallPanel() {
         open={open}
         onClose={() => !busy && setOpen(false)}
         title={t('settings.uninstall_confirm_title', {
-          defaultValue: 'Remove all VoiceStudio data?',
+          defaultValue: 'Remove all AUREO VOICE STUDIO data?',
         })}
         size="md"
         footer={

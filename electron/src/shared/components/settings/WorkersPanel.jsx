@@ -219,7 +219,7 @@ export default function WorkersPanel() {
           <p role="alert" className="rounded-lg bg-red-500/5 p-3 text-sm text-red-300">
             {t('settings.workers_port_conflict', {
               defaultValue:
-                'Remote workers are unavailable because another VoiceStudio instance is already accepting them on this port. Close the other instance, or set OMNIVOICE_WORKER_PORT to a different port and restart VoiceStudio.',
+                'Remote workers are unavailable because another AUREO VOICE STUDIO instance is already accepting them on this port. Close the other instance, or set OMNIVOICE_WORKER_PORT to a different port and restart AUREO VOICE STUDIO.',
             })}
           </p>
         )}
@@ -307,7 +307,7 @@ function EmptyWorkers() {
   const { t } = useTranslation();
   const steps = [
     t('settings.workers_step_1', {
-      defaultValue: 'Install VoiceStudio on the machine with the GPU.',
+      defaultValue: 'Install AUREO VOICE STUDIO on the machine with the GPU.',
     }),
     t('settings.workers_step_2', { defaultValue: 'Generate a token above.' }),
     t('settings.workers_step_3', {

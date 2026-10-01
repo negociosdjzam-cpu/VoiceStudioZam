@@ -10,7 +10,7 @@
         into the app's Info.plist by tauri-bundler at bundle time.
     -->
     <key>NSMicrophoneUsageDescription</key>
-    <string>VoiceStudio needs microphone access for live dictation and voice recording. Audio is processed on your machine.</string>
+    <string>AUREO VOICE STUDIO needs microphone access for live dictation and voice recording. Audio is processed on your machine.</string>
 
     <!--
         Same story for camera. We don't currently use it, but if a future
@@ -18,6 +18,6 @@
         need this string. Cheap to ship now; avoids a future TCC denial.
     -->
     <key>NSCameraUsageDescription</key>
-    <string>VoiceStudio may use the camera for upcoming video features. Video stays on your machine.</string>
+    <string>AUREO VOICE STUDIO may use the camera for upcoming video features. Video stays on your machine.</string>
 </dict>
 </plist>

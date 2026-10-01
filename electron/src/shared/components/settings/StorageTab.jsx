@@ -74,7 +74,7 @@ export default function StorageTab() {
         icon={HardDrive}
         title={t('settings.storage', { defaultValue: 'Storage' })}
         description={t('settings.storage_desc', {
-          defaultValue: 'Where VoiceStudio keeps your data and outputs.',
+          defaultValue: 'Where AUREO VOICE STUDIO keeps your data and outputs.',
         })}
       >
         <div className="grid grid-cols-1 gap-[var(--space-3)] @min-[560px]/settings:grid-cols-3">

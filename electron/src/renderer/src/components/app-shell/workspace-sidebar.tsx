@@ -131,7 +131,9 @@ export function WorkspaceSidebar() {
               className="flex min-w-0 flex-1 items-center gap-2 rounded outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <img src={brandIcon} alt="" className="size-6 shrink-0" />
-              <span className="truncate text-base font-semibold">{t('app.name')}</span>
+              <span className="min-w-0 whitespace-normal text-sm leading-tight font-semibold">
+                {t('app.name')}
+              </span>
             </Link>
             <Button
               variant="ghost"

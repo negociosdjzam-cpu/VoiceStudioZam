@@ -127,7 +127,7 @@ export function SponsorInquiry({
               setBusy(true);
               try {
                 const href = sponsorMailto(
-                  `VoiceStudio — ${t('support.sponsors_become')}`,
+                  `AUREO VOICE STUDIO — ${t('support.sponsors_become')}`,
                   message.trim(),
                 );
                 const bridge = getBridge();

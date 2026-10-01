@@ -137,7 +137,7 @@ export default function OpenApiPanel() {
   const loadingLabel = t('openapi.loading', { defaultValue: 'Loading API spec…' });
 
   return (
-    <SettingsSection icon={Braces} title={t('openapi.title', { defaultValue: 'VoiceStudio API' })}>
+    <SettingsSection icon={Braces} title={t('openapi.title', { defaultValue: 'AUREO VOICE STUDIO API' })}>
       {/* Spec URL + copy / open-raw affordances — useful whether the embed
           loaded or not, so shown in every phase. */}
       <div className="mb-[var(--space-3)] flex flex-wrap items-center gap-[var(--space-2)]">

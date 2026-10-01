@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="docs/logo.png" alt="VoiceStudio" width="88" />
-  <h1>VoiceStudio</h1>
+  <img src="docs/logo.png" alt="AUREO VOICE STUDIO" width="88" />
+  <h1>AUREO VOICE STUDIO</h1>
   <p>
-    <a href="https://trendshift.io/repositories/28176?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-28176" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/28176" alt="VoiceStudio ranking on Trendshift" width="220" height="48" /></a>
+    <a href="https://trendshift.io/repositories/28176?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-28176" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/28176" alt="Upstream VoiceStudio ranking on Trendshift" width="220" height="48" /></a>
   </p>
   <p><strong>Open-source voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.</strong></p>
   <p>
@@ -22,6 +22,8 @@
 </div>
 
 ![A tour of the Electron app: voice cloning, voice design, dubbing, and model management](docs/media/electron/voicestudio.gif)
+
+AUREO VOICE STUDIO is a visual rebranding of the upstream VoiceStudio application. Phase 1 preserves its technical identifiers, engines, storage paths, updater and AGPL-3.0 attribution. See [the Phase 1 scope](docs/rebranding-phase1.md).
 
 ## Your voice. Your workflow.
 
@@ -50,7 +52,7 @@ Local workflows run on your hardware. Remote services are optional; usage analyt
   <tr><td align="center">Voice design</td><td align="center">Local models</td></tr>
 </table>
 
-<img width="2628" height="1950" alt="VoiceStudio desktop workspace" src="https://github.com/user-attachments/assets/b474497d-a453-49a3-a2dd-f023ec6b7659" />
+<img width="2628" height="1950" alt="Upstream VoiceStudio desktop workspace" src="https://github.com/user-attachments/assets/b474497d-a453-49a3-a2dd-f023ec6b7659" />
 
 </details>
 
@@ -97,7 +99,7 @@ Open **Voice cloning**, choose a voice or add a clean reference recording, enter
 Paste into your coding agent (Claude Code, Codex, Cursor, …):
 
 ```text
-Install the VoiceStudio Electron app on this device and verify it works, following
+Install the AUREO VOICE STUDIO Electron app on this device and verify it works, following
 https://github.com/debpalash/VoiceStudio/blob/main/docs/install/agent.md
 ```
 
@@ -138,7 +140,7 @@ Agent skills: `npx skills add debpalash/VoiceStudio` — choose **voicestudio** 
 
 ## Sponsors
 
-<a href="https://forms.gle/2PYCvd39hbwijzX37"><img src="docs/media/sponsor-slot.svg" alt="Your brand — apply for a featured VoiceStudio sponsor slot" width="640" /></a>
+<a href="https://forms.gle/2PYCvd39hbwijzX37"><img src="docs/media/sponsor-slot.svg" alt="Your brand — apply for a featured AUREO VOICE STUDIO sponsor slot" width="640" /></a>
 
 **Become a featured partner.** [Apply for a paid placement](https://forms.gle/2PYCvd39hbwijzX37) · [Email us](mailto:partner@voicestudio.sh)
 

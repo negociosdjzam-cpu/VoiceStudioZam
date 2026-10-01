@@ -105,7 +105,7 @@ describe('apiFetch — a failed backend start surfaces the shell diagnosis (#117
     stageMock.mockResolvedValue(lc('failed', null));
 
     const err = await rejection(apiFetch('/model/status'), CASCADE_MS + 100);
-    expect(err.message).toContain("Can't reach the local VoiceStudio backend");
+    expect(err.message).toContain("Can't reach the local AUREO VOICE STUDIO backend");
   });
 
   // #1164 must not regress: outside the desktop shell there IS no shell to
@@ -117,7 +117,7 @@ describe('apiFetch — a failed backend start surfaces the shell diagnosis (#117
     stageMock.mockResolvedValue(lc('unknown'));
 
     const err = await rejection(apiFetch('/model/status'), CASCADE_MS + 100);
-    expect(err.message).toContain("Can't reach the local VoiceStudio backend");
+    expect(err.message).toContain("Can't reach the local AUREO VOICE STUDIO backend");
     expect(err.message).not.toContain('could not start');
   });
 });

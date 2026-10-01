@@ -60,7 +60,7 @@ assert.equal(
   true,
   'Linux window and desktop entry share one identity',
 );
-assert(config.mac.extendInfo.NSMicrophoneUsageDescription.includes('VoiceStudio'));
+assert(config.mac.extendInfo.NSMicrophoneUsageDescription.includes('AUREO VOICE STUDIO'));
 for (const entitlementFile of [config.mac.entitlements, config.mac.entitlementsInherit]) {
   const entitlements = readFileSync(resolve(root, entitlementFile), 'utf8');
   assert.match(entitlements, /<key>com\.apple\.security\.device\.audio-input<\/key>\s*<true\s*\/>/);
