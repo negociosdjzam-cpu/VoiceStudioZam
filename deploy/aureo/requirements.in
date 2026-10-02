@@ -1,0 +1,7 @@
+# Dedicated Linux x86_64 / Python 3.11 environment; never sync into the app.
+chatterbox-tts==0.1.7
+torch==2.6.0
+torchaudio==2.6.0
+psutil==7.2.2
+audioseal==0.2.0
+uv==0.12.19

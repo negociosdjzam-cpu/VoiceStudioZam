@@ -25,6 +25,8 @@
 
 AUREO VOICE STUDIO is a visual rebranding of the upstream VoiceStudio application. Phase 1 preserves its technical identifiers, engines, storage paths, updater and AGPL-3.0 attribution. See [the Phase 1 scope](docs/rebranding-phase1.md).
 
+For the opt-in persistent GPU worker, see [Phase 4: Chatterbox Multilingual on Runpod](docs/aureo-runpod.md).
+
 ## Your voice. Your workflow.
 
 | Create | Produce | Connect |

@@ -1,5 +1,8 @@
 # AUREO VOICE ENGINE BENCHMARK — Phase 3
 
+For persistent Chatterbox GPU loading, reference caching, WAV exports and
+Runpod deployment, see [Phase 4](aureo-runpod.md).
+
 The native benchmark runs real SDK loading and synthesis once checkpoints and
 dependencies are provisioned locally. This phase builds and tests that
 infrastructure; it does not download models, publish audio, or assign engines
