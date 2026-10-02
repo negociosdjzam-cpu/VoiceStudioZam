@@ -31,6 +31,9 @@ class OpenVoiceV2Adapter(RuntimeAdapter):
     display_name = "OpenVoice V2"
     capabilities = EngineCapabilities(voice_reference=True, requires_voice_reference=True, seed=True, variation=True)
 
+    def _target_embedding(self, source: OpenVoiceSource, target, request: SynthesisRequest):
+        return target
+
     def _generate(self, request: SynthesisRequest) -> AudioChunk:
         reference = request.reference
         assert reference is not None
@@ -38,6 +41,7 @@ class OpenVoiceV2Adapter(RuntimeAdapter):
             source = self._runtime.synthesize_source(request)
             converter = self._runtime.converter
             target_embedding = converter.extract_se([str(reference.path)])
+            target_embedding = self._target_embedding(source, target_embedding, request)
             with tempfile.TemporaryDirectory(prefix="aureo-openvoice-") as directory:
                 source_path = Path(directory) / "source.wav"
                 write_source_wav(source.audio, source_path)

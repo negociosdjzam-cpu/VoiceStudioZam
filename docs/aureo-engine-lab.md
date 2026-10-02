@@ -1,5 +1,8 @@
 # AUREO VOICE ENGINE LAB — Phase 2
 
+For native Multilingual/1.7B Base/V2+Melo loading, isolated trials, fidelity/speed
+controls and saved comparisons, see [the Phase 3 benchmark guide](aureo-engine-benchmark.md).
+
 This is a parallel, independent Python foundation for future AUREO Core work.
 It is usable through Python and `python -m aureo`. Existing OmniVoice engines,
 `TTSBackend`, HTTP routes, SQLite profiles, user-data paths, UI, credits,

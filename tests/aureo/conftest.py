@@ -25,6 +25,7 @@ def make_engine(clock):
             capabilities = EngineCapabilities(
                 voice_reference=True, seed=True, variation=True, energy=True,
                 expression=True, streaming=True, languages=("en", "es"),
+                fidelity=True, speed=True,
             )
 
             def __init__(self):
