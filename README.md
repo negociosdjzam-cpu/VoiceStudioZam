@@ -129,6 +129,8 @@ Add `-- --install` for the networked managed-runtime installation check.
 
 ## Documentation
 
+- [AUREO VOICE ENGINE LAB](docs/aureo-engine-lab.md): independent engine contracts, profile bindings and local benchmarks; existing engines remain unchanged.
+
 | Need | Start here |
 |---|---|
 | Setup help | [Troubleshooting](docs/install/troubleshooting.md) · [Model downloads](docs/downloading-models.md) |

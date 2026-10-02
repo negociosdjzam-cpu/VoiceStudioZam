@@ -319,10 +319,10 @@ constraint-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.sdist]
-include = ["omnivoice"]
+include = ["omnivoice", "aureo"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["omnivoice"]
+packages = ["omnivoice", "aureo"]
 
 [dependency-groups]
 dev = [
