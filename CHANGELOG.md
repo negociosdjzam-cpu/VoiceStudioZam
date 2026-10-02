@@ -9,6 +9,7 @@ metadata and the backend fallback mirror it.
 ## [Unreleased]
 
 **Highlights**
+- Add a persistent AUREO GPU worker with cached references, seeded WAV benchmarks and isolated Runpod deployment.
 - Add isolated native AUREO benchmark trials with style presets, local-only loading and JSON/Markdown comparisons.
 - Add an independent AUREO engine lab with profile modes, local runtime adapters and metadata-only benchmarks.
 - Reserve migration snapshot counters atomically (#2453) — thanks @rudycelekli!

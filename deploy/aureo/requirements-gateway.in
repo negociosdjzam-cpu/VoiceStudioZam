@@ -1,0 +1,6 @@
+# Runpod's tomlkit constraint conflicts with Chatterbox's Gradio dependency.
+# Keep the network-facing gateway in its own interpreter.
+fastapi==0.142.2
+uvicorn==0.54.0
+runpod==1.12.0
+uv==0.12.19

@@ -1,0 +1,15 @@
+# Pod: network volume mounted at /workspace. Serverless: use /runpod-volume/aureo.
+AUREO_STORAGE_DIR=/workspace/aureo
+AUREO_MODEL_DIR=/workspace/aureo/models/chatterbox
+AUREO_ENV_DIR=/workspace/aureo-env
+AUREO_GATEWAY_ENV_DIR=/workspace/aureo-env-gateway
+AUREO_WORKER_PYTHON=/workspace/aureo-env/bin/python
+AUREO_DEVICE=cuda:0
+AUREO_MIN_VRAM_GIB=8
+AUREO_REFERENCE_CACHE_ENTRIES=3
+AUREO_JOB_TIMEOUT_SECONDS=600
+AUREO_MAX_TEXT_CHARS=2000
+# Pod HTTP authentication; set a private random token, minimum 16 characters.
+AUREO_API_TOKEN=
+# Provisioning ONLY: set to a real, immutable 40-character HF commit.
+AUREO_MODEL_REVISION=
