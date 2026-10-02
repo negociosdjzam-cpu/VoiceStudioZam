@@ -42,7 +42,7 @@ class AureoEngine(ABC):
         caps = self.capabilities
         if caps.requires_voice_reference and request.reference is None:
             raise AureoEngineError("reference_required", "This engine requires a voice reference")
-        for control in ("seed", "variation", "energy", "expression"):
+        for control in ("seed", "variation", "energy", "expression", "fidelity", "speed"):
             if getattr(request, control) is not None and not getattr(caps, control):
                 raise AureoEngineError("unsupported_control", f"This engine does not support {control}")
         if request.streaming and not caps.streaming:

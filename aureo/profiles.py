@@ -24,6 +24,8 @@ class AureoVoiceProfile:
     energy: float | None = None
     expression: str | None = None
     mode_engines: Mapping[QualityMode, str] = field(default_factory=dict)
+    fidelity: float | None = None
+    speed: float | None = None
 
     def __post_init__(self) -> None:
         valid_identifier(self.profile_id)
@@ -42,6 +44,7 @@ class AureoVoiceProfile:
             text=text, reference=self.reference, mode=self.mode if mode is None else QualityMode(mode),
             language=self.language, seed=self.seed, variation=self.variation,
             energy=self.energy, expression=self.expression, streaming=streaming,
+            fidelity=self.fidelity, speed=self.speed,
         )
 
     def to_dict(self) -> dict:
@@ -53,6 +56,7 @@ class AureoVoiceProfile:
             },
             "language": self.language, "seed": self.seed, "variation": self.variation,
             "energy": self.energy, "expression": self.expression,
+            "fidelity": self.fidelity, "speed": self.speed,
             "mode_engines": {mode.value: engine for mode, engine in self.mode_engines.items()},
         }
 
@@ -60,7 +64,7 @@ class AureoVoiceProfile:
     def from_dict(cls, value: dict) -> AureoVoiceProfile:
         if not isinstance(value, dict) or type(value.get("version")) is not int or value["version"] != 1:
             raise ValueError("Unsupported AUREO profile format")
-        allowed = {"version", "profile_id", "engine_id", "mode", "reference", "language", "seed", "variation", "energy", "expression", "mode_engines"}
+        allowed = {"version", "profile_id", "engine_id", "mode", "reference", "language", "seed", "variation", "energy", "expression", "mode_engines", "fidelity", "speed"}
         if set(value) - allowed:
             raise ValueError("Unknown AUREO profile fields")
         fields = {key: item for key, item in value.items() if key != "version"}

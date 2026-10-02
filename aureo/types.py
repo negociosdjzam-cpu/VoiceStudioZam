@@ -61,6 +61,8 @@ class SynthesisRequest:
     energy: float | None = None
     expression: str | None = None
     streaming: bool = False
+    fidelity: float | None = None
+    speed: float | None = None  # speech-rate multiplier, not inference throughput
 
     def __post_init__(self) -> None:
         if not isinstance(self.text, str) or not self.text.strip():
@@ -72,6 +74,12 @@ class SynthesisRequest:
             raise ValueError("Seed must be an integer between 0 and 2**32 - 1")
         unit_interval(self.variation, "variation")
         unit_interval(self.energy, "energy")
+        unit_interval(self.fidelity, "fidelity")
+        if self.speed is not None and (
+            isinstance(self.speed, bool) or not isinstance(self.speed, Real)
+            or not math.isfinite(self.speed) or not 0.25 <= self.speed <= 4
+        ):
+            raise ValueError("speed must be a finite speech-rate multiplier between 0.25 and 4")
         for name in ("language", "expression"):
             value = getattr(self, name)
             if value is not None and (not isinstance(value, str) or not value.strip()):
@@ -90,6 +98,8 @@ class EngineCapabilities:
     expression: bool = False
     streaming: bool = False
     languages: tuple[str, ...] = ()  # empty means the plugin validates languages
+    fidelity: bool = False
+    speed: bool = False
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "engines": {
+    "chatterbox-multilingual": {
+      "python": "/workspace/aureo-runtime-envs/chatterbox/bin/python",
+      "device": "cuda:0",
+      "checkpoint_dir": "/workspace/aureo-models/chatterbox-multilingual"
+    }
+  }
+}
